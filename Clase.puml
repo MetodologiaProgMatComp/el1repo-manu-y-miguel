@@ -1,0 +1,21 @@
+@startuml
+
+class E0 {}
+class E1 {}
+class EN {}
+
+E0 --> E1 : (3)
+E1 --> E0 : (4)
+
+EN --E1 : (2)
+EN -->E0 : (1)
+E0 --> EN : (3)
+E1 --> EN : (1)
+
+class E11 {}
+class ENN {}
+
+E11 --> null
+ENN --> E11 : (12)
+E11 --> ENN : (11)
+@enduml
